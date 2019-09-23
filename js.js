@@ -9,14 +9,14 @@ function retourInput() {
     return input.value.length;
 }
 
+function createLi() {
+    li = document.createElement("li");
+}
+
 function GetLiOnEnter(enter) {
     if (enter.keyCode === 13) {
         AddContentElement();
     }
-}
-
-function createLi() {
-    li = document.createElement("li");
 }
 
 function createList() {
@@ -32,9 +32,10 @@ function AddContentElement() {
     if (retourInput() > 0) {
         createLi();
         addTextContent();
-        createList(); 
+        createList();
     }
 }
 
 button.addEventListener("click", AddContentElement);
-button.addEventListener( "click" , AddContentElement);
+
+button.addEventListener(GetLiOnEnter, AddContentElement);
