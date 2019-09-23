@@ -38,4 +38,4 @@ function AddContentElement() {
 
 button.addEventListener("click", AddContentElement);
 
-button.addEventListener(GetLiOnEnter, AddContentElement);
+button.addEventListener("click", AddContentElement);
