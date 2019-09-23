@@ -2,3 +2,7 @@ ul > li:hover{
     background-image: linear-gradient(to right, green, lightgreen, white);
     width: 8rem;
 }
+
+li::first-letter {
+    text-transform: uppercase;
+}

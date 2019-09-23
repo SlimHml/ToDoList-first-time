@@ -5,37 +5,45 @@ const input = document.getElementById("input");
 const ul = document.getElementById("ul");
 let li;
 
-function retourInput() {
+function returnInputLength() {
     return input.value.length;
 }
 
-function createLi() {
+function addLi() {
     li = document.createElement("li");
 }
 
-function GetLiOnEnter(enter) {
-    if (enter.keyCode === 13) {
-        AddContentElement();
+function addLiOnkeypress(enter) {
+    if (returnInputLength() > 0 && enter.keyCode === 13) {
+        callbacksToCreateLi();
     }
 }
 
-function createList() {
+function lowerCaseTheString() {
+    return input.value.slice(1, input.value.length).toLowerCase();
+}
+
+function insertLiInsideDom() {
     ul.append(li);
 }
 
-function addTextContent() {
-    li.append(document.createTextNode(input.value));
+function addTextNodeInLi() {
+    li.append(document.createTextNode(lowerCaseTheString()));
+}
+
+function emptyTheInput() {
     input.value = "";
 }
 
-function AddContentElement() {
-    if (retourInput() > 0) {
-        createLi();
-        addTextContent();
-        createList();
+function callbacksToCreateLi() {
+    if (returnInputLength() > 0) {
+        addLi();
+        addTextNodeInLi();
+        insertLiInsideDom();
+        emptyTheInput();
     }
 }
 
-button.addEventListener("click", AddContentElement);
+button.addEventListener("click", callbacksToCreateLi);
 
-button.addEventListener("click", AddContentElement);
+input.addEventListener("keypress",  addLiOnkeypress);
