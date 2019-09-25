@@ -1,5 +1,5 @@
 ul > li:hover{
-    background-image: linear-gradient(to right, green, lightgreen, white);
+    background-image: linear-gradient(to right, #b5f03e, #ccf576, #d4f78b, white);
     width: 8rem;
 }
 

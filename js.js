@@ -20,7 +20,7 @@ function addLiOnkeypress(enter) {
 }
 
 function lowerCaseTheString() {
-    return input.value.slice(1, input.value.length).toLowerCase();
+    return input.value.toLowerCase();
 }
 
 function insertLiInsideDom() {
