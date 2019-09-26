@@ -1,8 +1,67 @@
-ul > li:hover{
-    background-image: linear-gradient(to right, #b5f03e, #ccf576, #d4f78b, white);
-    width: 8rem;
-}
-
 li::first-letter {
     text-transform: uppercase;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 3rem;
+    color: rgba(0,0,0,0.70);
+    margin-left: 25rem;
+}
+
+input {
+    margin-left: 25rem;
+        width: 25%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid;
+        padding: 1em 0 .8em;
+        text-align: center;
+        font-size: 18px;
+        font-family: inherit;
+        font-weight: 300;
+        line-height: 1.5;
+        color: inherit;
+        outline: none;
+}
+
+li {
+    margin-left: 25rem;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 2rem;
+    list-style-type: decimal;
+}
+
+button {
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.1em 0.1em 0;
+border: .2rem solid rgb(54, 247, 64);
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color: white;
+text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+text-align:center;
+transition: all 0.2s;
+outline: 0;
+width: 12%;
+font-family: 'Homemade Apple', cursive;
+}
+
+button:hover{
+border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+ a.button4{
+display:block;
+margin:0.2em auto;
+ }
 }
